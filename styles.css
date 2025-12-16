@@ -1,0 +1,141 @@
+:root {
+  --bg: #050711;
+  --card: #12172b;
+  --text: #eaeaff;
+  --muted: #9aa4bf;
+  --primary: #7c5cff;
+  --accent: #00f5d4;
+}
+
+body.light {
+  --bg: #f5f7ff;
+  --card: #ffffff;
+  --text: #121212;
+  --muted: #555;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #1b2340, var(--bg));
+  color: var(--text);
+  transition: background 0.5s, color 0.5s;
+}
+
+/* NAVBAR */
+.navbar-limber {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(5,7,17,0.9);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.nav-btn, .theme-toggle {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text);
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+/* HERO */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+}
+
+.hero p {
+  color: var(--muted);
+}
+
+.primary-btn {
+  margin-top: 2rem;
+  padding: 0.8rem 2.5rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.section-desc {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 3rem;
+}
+
+/* CARDS */
+.card-ui {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.preview button {
+  margin: 0.4rem;
+}
+
+/* COMPARISON */
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 2rem;
+}
+
+.compare-card {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ANIMATIONS */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}

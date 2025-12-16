@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIMBER UI • Frontend Lab</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  prefix: 'tw-',
+  corePlugins: { preflight: false }
+}
+</script>
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar-limber">
+  <div class="nav-left">
+    <span class="logo">LIMBER</span>
+  </div>
+  <div class="nav-right">
+    <button class="nav-btn" data-target="bootstrap">Bootstrap</button>
+    <button class="nav-btn" data-target="tailwind">Tailwind</button>
+    <button class="nav-btn" data-target="comparison">Comparación</button>
+    <button id="themeToggle" class="theme-toggle">
+      <i class="bi bi-moon-stars"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-content reveal">
+    <h1>Frontend UI Laboratory</h1>
+    <p>Comparación visual, práctica y profesional entre Bootstrap y Tailwind CSS</p>
+
+    <div class="hero-actions">
+      <button id="exploreBtn" class="primary-btn">
+        Explorar Componentes
+        <i class="bi bi-arrow-down"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= BOOTSTRAP ================= -->
+<section id="bootstrap" class="section active reveal">
+  <div class="container">
+    <h2 class="section-title">Bootstrap 5</h2>
+    <p class="section-desc">Rapidez, consistencia y componentes listos</p>
+
+    <div class="card-ui">
+      <h3>Botones</h3>
+      <div class="preview">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-danger">Danger</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TAILWIND ================= -->
+<section id="tailwind" class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Tailwind CSS</h2>
+    <p class="section-desc">Control total con utilidades</p>
+
+    <div class="card-ui">
+      <h3>Botones</h3>
+      <div class="preview">
+        <button class="tw-bg-blue-500 tw-hover:bg-blue-600 tw-text-white tw-px-5 tw-py-2 tw-rounded-lg tw-transition">Primary</button>
+        <button class="tw-bg-green-500 tw-hover:bg-green-600 tw-text-white tw-px-5 tw-py-2 tw-rounded-lg tw-transition">Success</button>
+        <button class="tw-bg-red-500 tw-hover:bg-red-600 tw-text-white tw-px-5 tw-py-2 tw-rounded-lg tw-transition">Danger</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARISON ================= -->
+<section id="comparison" class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Comparación</h2>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h4>Bootstrap</h4>
+        <button class="btn btn-primary">Primary</button>
+        <code>btn btn-primary</code>
+      </div>
+
+      <div class="compare-card">
+        <h4>Tailwind</h4>
+        <button class="tw-bg-blue-500 tw-text-white tw-px-4 tw-py-2 tw-rounded">Primary</button>
+        <code>bg-blue-500 px-4 py-2</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2025 LIMBER UI — Frontend Professional Lab</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
